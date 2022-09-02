@@ -34,7 +34,7 @@ axios(url)
         from: process.env.EMAIL,
         to: 'savraj.c@gmail.com',
         subject: 'Todays news',
-        text: JSON.stringify(articles)
+        text: JSON.stringify(articles,null , "\n")
       };
       //let stringMessage = JSON.stringify(mailOptions)
       transporter.sendMail(mailOptions, function(error, info){
